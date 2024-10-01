@@ -12,7 +12,7 @@ export const CardTitle = styled.h2`
     justify-content:center;
 `
 export const CardText = styled.p`
-    text-align: center;
+    text-align: center; 
     font-weight: bold;
 `
 export const CardImage = styled.img`
