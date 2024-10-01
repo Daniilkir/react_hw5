@@ -1,5 +1,8 @@
 import { ListHobie } from './listHobies'
-import { CardHobies } from '../cardHobies/cardHobies.jsx'
+import { CardHobie } from './listHobies'
+import { CardTitle } from './listHobies'
+import { CardImage } from './listHobies'
+import { CardText } from './listHobies'
 
 export const ListHobby = ({ hobbies }) => {
     return (
@@ -7,10 +10,15 @@ export const ListHobby = ({ hobbies }) => {
         <ListHobie>
             {hobbies.map(hobbies =>
                 <li key={hobbies.id}>
-                    <CardHobies hobbies={hobbies} />
+                    <CardHobie hobbies={hobbies}>
+                        <CardTitle>{hobbies.name}</CardTitle>
+                        <CardImage src={hobbies.image} alt={hobbies.alt}></CardImage>
+                        <CardText>{hobbies.about}</CardText>
+                    </CardHobie>
                 </li>
-            )}
-        </ListHobie>
+            )
+            }
+        </ListHobie >
 
     )
 }
